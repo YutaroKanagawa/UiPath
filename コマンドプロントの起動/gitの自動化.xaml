@@ -149,7 +149,7 @@
         <OutArgument x:TypeArguments="x:String">[commitMassage]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("yyyyMMdd-hhmm")]</InArgument>
+        <InArgument x:TypeArguments="x:String">[System.DateTime.Now.ToString("yyyy-MMdd-hhmm")]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="文字を入力" sap:VirtualizedContainerService.HintSize="334,96" sap2010:WorkflowViewState.IdRef="TypeInto_5" Text="[&quot;git commit -m &quot;+ &quot;commitMassage&quot;]">
