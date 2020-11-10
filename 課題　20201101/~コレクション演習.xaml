@@ -149,7 +149,7 @@
                   <av:Size x:Key="ShapeSize">200,51</av:Size>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ParallelForEach x:TypeArguments="x:String" DisplayName="並列繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="426,451" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[MySheetNames]">
+              <ParallelForEach x:TypeArguments="x:String" DisplayName="並列繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ParallelForEach`1_2" Values="[MySheetNames]">
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="item" />
@@ -163,7 +163,9 @@
                     <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="メッセージ ボックス" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;リストの中身を全部出す&quot;]" />
                     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="334,112" UnSafe="False" WorkflowFileName="科目の転記1110.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="BK" />
+                        <InArgument x:TypeArguments="x:String" x:Key="BK">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="MyWorkBookName" />
+                        </InArgument>
                         <InArgument x:TypeArguments="x:String" x:Key="Sh">
                           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item" />
                         </InArgument>
